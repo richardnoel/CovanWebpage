@@ -52,6 +52,44 @@ export class AppComponent implements OnInit {
             group: false,
             title: 'Acerca de Nosotros',
             ref: '#about'
+          },
+          {
+            group: false,
+            title: 'Nuevo Menu',
+            ref: '#about'
+          },
+          {
+            group: false,
+            title: 'Nuevo Menu 2',
+            ref: '#about'
+          }
+        ]
+      },
+      heroData: {
+        items: [
+          {
+            state: 'active',
+            image: 'assets/img/slide/slide-1.jpg',
+            title: 'Welcome to Green 1',
+            description: 'Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.',
+            linkText: 'Read More',
+            link: '#about'
+          },
+          {
+            state: '',
+            image: 'assets/img/slide/slide-2.jpg',
+            title: 'Welcome to Green 2',
+            description: 'Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.',
+            linkText: 'Read More',
+            link: '#about'
+          },
+          {
+            state: '',
+            image: 'assets/img/slide/slide-3.jpg',
+            title: 'Welcome to Green 3',
+            description: 'Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.',
+            linkText: 'Read More',
+            link: '#about'
           }
         ]
       }

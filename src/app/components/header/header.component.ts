@@ -7,7 +7,6 @@ import * as $ from "jquery";
 })
 export class HeaderComponent implements OnInit {
   @Input() headerData: any = {};
-  //public headerData: any = {};
   constructor() { }
   ngOnInit(): void {
     if ($('.nav-menu').length) {

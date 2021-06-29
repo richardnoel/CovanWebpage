@@ -1,0 +1,28 @@
+<section id="hero">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+        <div class="carousel-inner" role="listbox">
+            <div *ngFor="let item of heroData.items" class="carousel-item {{item.state}}"
+                style="background-image: url({{item.image}})">
+                <div class="carousel-container">
+                    <div class="container">
+                        <h2 class="animate__animated animate__fadeInDown"><span>{{item.title}}</span></h2>
+                        <p class="animate__animated animate__fadeInUp">
+                            {{item.description}}
+                        </p>
+                        <a href="{{item.link}}"
+                            class="btn-get-started animate__animated animate__fadeInUp scrollto">{{item.linkText}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon icofont-simple-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
