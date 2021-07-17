@@ -11,5 +11,15 @@ export class CalculatorComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  downloadFile(): void {
+    debugger
+    let link = document.createElement('a');
+    link.setAttribute('type', 'hidden');
+    link.href = 'assets/document/normativa.pdf';
+    link.target="_blank";
+    //link.download = path;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }
 }
