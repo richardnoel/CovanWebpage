@@ -1,15 +1,15 @@
-
-
 /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
 
-  #header {
+#header {
     background: #fff;
     transition: all 0.5s;
     z-index: 997;
     padding: 20px 0;
     top: 40px;
+    box-shadow: 0 3px 1px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+    border: 1px solid #efefef;
 }
 
 #header.header-scrolled {
@@ -46,9 +46,8 @@
 }
 
 
-
-
 /* Desktop Navigation */
+
 .nav-menu ul {
     margin: 0;
     padding: 0;
@@ -167,22 +166,51 @@
 
 /* Get Startet Button */
 
-.get-started-btn {
+#header .button-primary {
+    background-color: #3268c1;
     margin-left: 25px;
-    color: #3386FF;
-    border-radius: 4px;
+    border-radius: 30px;
     padding: 7px 25px 8px 25px;
-    white-space: nowrap;
-    transition: 0.3s;
     font-size: 14px;
-    border: 2px solid #3386FF;
     display: inline-block;
-    font-weight: 600;
+    box-shadow: 0 2px 1px rgb(0 0 0 / 16%), 1px 2px 3px rgb(0 0 0 / 23%);
 }
 
-.get-started-btn:hover {
-    background: #3386FF;
+#header .button-primary {
     color: #fff;
+}
+
+#header .search {
+    background-color: #ffffff!important;
+}
+
+#header .search-content {
+    background-color: #ffffff!important;
+    border-radius: 30px;
+    border: 1px solid #c0c0c0;
+    padding: 0px;
+    margin-bottom: 0px!important;
+}
+
+#header .search-content .form-control {
+    border: none;
+    border-radius: 40px;
+    padding: 4px 30px 4px 20px;
+}
+
+#header .search-content .form-control:focus {
+    outline: none;
+}
+
+#header .search-content .input-group-btn {
+    position: absolute;
+    right: 0;
+    z-index: 100;
+}
+
+#header .search-form {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 @media (max-width: 768px) {
@@ -302,4 +330,3 @@
 .mobile-nav-active .mobile-nav-toggle i {
     color: #141414;
 }
-

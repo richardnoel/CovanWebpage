@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import * as $ from "jquery";
 @Component({
   selector: 'app-root',
@@ -7,8 +8,27 @@ import * as $ from "jquery";
 })
 export class AppComponent implements OnInit {
   title = 'CovanWebpage';
-  public generalData: any = {}
-
+  public generalData: any = {};
+  private exceptLinks: Array<String> = [
+    "service",
+    "about",
+    "tool"
+  ];
+  router: string;
+  currentRoute: string = '';
+  constructor(private _router: Router) {
+    this.router = _router.url;
+  }
+  hasRoute() {
+    console.log("*********hasRoute************");
+    let result = true;
+    this.exceptLinks.forEach((item:any) =>{
+      if(result && window.location.href.includes(item)){
+        result = false;
+      }
+    });
+    return result;
+  }
   ngOnInit(): void {
     this.generalData = {
       topBarData: {
@@ -19,7 +39,8 @@ export class AppComponent implements OnInit {
         start: {
           group: false,
           title: 'Inicia Sesion',
-          ref: '#session'
+          ref: '#session',
+          class: 'button-primary'
         },
         menu: [
           {
@@ -29,39 +50,30 @@ export class AppComponent implements OnInit {
               {
                 group: false,
                 title: 'Calculadora',
-                ref: '#Calculadora'
+                ref: 'tools/calculator'
+                // ref: 'about/card',
               },
               {
                 group: false,
                 title: 'Biblioteca',
-                ref: '#Biblioteca'
+                ref: 'tools/library'
               },
               {
                 group: false,
                 title: 'Tramite.com',
-                ref: '#Tramite.com'
+                ref: 'tools/formalities'
               }
             ]
           },
           {
             group: false,
             title: 'Servicios',
-            ref: '#services'
+            ref: 'service/main',
           },
           {
             group: false,
             title: 'Acerca de Nosotros',
-            ref: '#about'
-          },
-          {
-            group: false,
-            title: 'Nuevo Menu',
-            ref: '#about'
-          },
-          {
-            group: false,
-            title: 'Nuevo Menu 2',
-            ref: '#about'
+            ref: 'about/main',
           }
         ]
       },
@@ -94,5 +106,7 @@ export class AppComponent implements OnInit {
         ]
       }
     }
+    // console.log("app AppComponent -> ngOnInit");
+    // console.log(this.generalData);
   }
 }

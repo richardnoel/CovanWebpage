@@ -21,7 +21,8 @@ export class HomeComponent implements OnInit {
         start: {
           group: false,
           title: 'Inicia Sesion',
-          ref: '#session'
+          ref: '#session',
+          class: 'button-primary'
         },
         menu: [
           {

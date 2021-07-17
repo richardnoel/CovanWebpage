@@ -1,21 +1,37 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CalculatorComponent } from './components/calculator/calculator.component';
-import { HomeComponent } from './components/home/home.component';
+import { AppComponent } from './app.component';
+
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: AppComponent
   },
   {
-    path: 'herramientas/calculadora',
-    component: CalculatorComponent
+    path: 'service',
+    loadChildren: () => import('./services/services.module').then(module => module.ServicesModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then(module => module.AboutModule)
+  },
+  {
+    path: 'tools',
+    loadChildren: () => import('./tools/tools.module').then(module => module.ToolsModule)
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+@NgModule({ 
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
+  ]
 })
 export class AppRoutingModule { }

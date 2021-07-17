@@ -1,3 +1,54 @@
-<router-outlet>
+<app-topbar [topBarData]="generalData.topBarData">
+</app-topbar>
+<app-header [headerData]="generalData.headerData">
+</app-header>
+<app-hero *ngIf="hasRoute()" [heroData]="generalData.heroData"></app-hero>
 
-</router-outlet>
+<main id="main">
+    <router-outlet></router-outlet>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h1>Rutas y Lazyload App</h1>
+<ul>
+    <li>
+       <a routerLink='/auth/login'>login</a> 
+    </li>
+    <li>
+       <a routerLink='/auth/registro'>registro</a> 
+    </li>
+    <li>
+       <a routerLink='/auth/forgot'>forgot</a> 
+    </li>
+</ul>
+
+<h1>Usuarios</h1>
+<ul>
+    <li>
+       <a routerLink='/usuarios/listado'>listado</a> 
+    </li>
+    <li>
+       <a routerLink='/usuarios/nuevo'>nuevo</a> 
+    </li>
+    <li>
+       <a routerLink='/usuarios/editar'>editar</a> 
+    </li>
+    <li>
+       <a routerLink='/usuarios/usuario'>usuario</a> 
+    </li>
+</ul>
+
+<router-outlet></router-outlet>  -->
