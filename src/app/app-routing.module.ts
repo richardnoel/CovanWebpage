@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
-  {
-    path: '',
-    component: AppComponent
-  },
   {
     path: 'service',
     loadChildren: () => import('./services/services.module').then(module => module.ServicesModule)
@@ -21,12 +18,13 @@ const routes: Routes = [
     loadChildren: () => import('./tools/tools.module').then(module => module.ToolsModule)
   },
   {
-    path: '**',
-    redirectTo: ''
+    path: '',
+    redirectTo: '/AppComponent',
+    pathMatch: 'full' 
   }
 ];
 
-@NgModule({ 
+@NgModule({
   imports: [
     RouterModule.forRoot(routes)
   ],

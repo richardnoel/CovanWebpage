@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CalculatorComponent } from './components/calculator/calculator.componen
     HeaderComponent,
     TopbarComponent,
     HeroComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

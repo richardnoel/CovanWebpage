@@ -44,6 +44,12 @@ export class AppComponent implements OnInit {
         },
         menu: [
           {
+            group: false,
+            title: 'Home',
+            ref: '/',
+            icon:''
+          },
+          {
             group: true,
             title: 'Herramientas',
             items: [
@@ -69,11 +75,19 @@ export class AppComponent implements OnInit {
             group: false,
             title: 'Servicios',
             ref: 'service/main',
+            icon:''
           },
           {
             group: false,
             title: 'Acerca de Nosotros',
             ref: 'about/main',
+            icon:''
+          },
+          {
+            group: false,
+            title: 'Contactanos',
+            ref: 'contact/main',
+            icon:''
           }
         ]
       },
