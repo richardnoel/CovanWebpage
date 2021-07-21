@@ -2,13 +2,80 @@
     <div class="container">
         <div class="section-title">
             <h2>Calculadora de Sanciones e Infracciones</h2>
-            <p>Resumen de que es la calculadora Ejemplo: Art 1°.- El presente reglamento tiene po objeto reglamentar el
-                regimen de infracciones administrativas y a determinacion y la aplicacion de sanciones, A cargo de COVAN
-            </p>
-            <p>
-                <button (click)="downloadFile()" type="button" class="btn btn-light"><i class="icofont-download"></i>Reglamento</button>
+            <p>Resumen de que es la calculadora Ejemplo: Art 1°.- El presente reglamento tiene po objeto reglamentar el regimen de infracciones administrativas y a determinacion y la aplicacion de sanciones, A cargo de COVAN
             </p>
         </div>
+        <div class="row align-middle">
+            <div class="col">
+                <p class="align-middle">Reglamento de Sanciones e infracciones comerciales y contables</p>
+                <button (click)="onClick('A','A')" type="button" class="btn btn-outline-primary align-middle"><i class="icofont-download"></i> Reglamento Sanciones</button>
+            </div>
+            <div class="col">
+                <p>Código de Comercio Decreto Ley Nº 14379</p>
+                <button (click)="onClick('A','B')" type="button" class="btn btn-outline-primary"><i class="icofont-download"></i> Reglamento Sanciones</button>
+            </div>
+        </div>
+        <br>
+        <div class="row align-middle">
+            <div class="col">
+                <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Como usar la calculadora?
+                      </a>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body align-justice">
+                        <ul class="list-unstyled">
+                            <li>
+                                <p> <i class="text-success icofont-check-circled"></i>&nbsp; Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                                    nesciunt sapiente ea proident.</p>
+                            </li>
+                            <li>
+                                <p> <i class="text-success icofont-check-circled"></i>&nbsp; Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                                    nesciunt sapiente ea proident.</p>
+                            </li>
+                            <li>
+                                <p> <i class="text-success icofont-check-circled"></i>&nbsp; Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                                    nesciunt sapiente ea proident.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="section-title">
+            <h4>Realizar el calculo</h4>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <ul>
+                    <li *ngFor="let item of articles">
+                        {{item.description}}
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Tipo de Sociedad</th>
+                                    <th scope="col">Multa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let penalty  of item.penaltys">
+                                    <td>{{getSocietys(penalty.societys)}}</td>
+                                    <td>{{penalty.amount}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- <div class="col">
+                <pre>{{society|json}}</pre>
+            </div>
+            <div class="col">
+                <pre>{{articles|json}}</pre>
+            </div> -->
+        </div>
+
     </div>
 </section>
-

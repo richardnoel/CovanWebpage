@@ -83,8 +83,16 @@ section {
     padding-bottom: 30px;
 }
 
+.section-title h4 {
+    font-size: 22px;
+}
+
 .section-title h2 {
     font-size: 32px;
+}
+
+.section-title h4,
+.section-title h2 {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -92,6 +100,7 @@ section {
     position: relative;
 }
 
+.section-title h4::before,
 .section-title h2::before {
     content: '';
     position: absolute;
@@ -103,13 +112,14 @@ section {
     left: calc(50% - 60px);
 }
 
+.section-title h4::after,
 .section-title h2::after {
     content: '';
     position: absolute;
     display: block;
     width: 40px;
     height: 3px;
-    background: #5cb874;
+    background: #1a52b9;
     bottom: 0;
     left: calc(50% - 20px);
 }
@@ -282,9 +292,6 @@ section {
 .clients .owl-dot.active {
     background-color: #5cb874 !important;
 }
-
-
-
 
 
 /*--------------------------------------------------------------

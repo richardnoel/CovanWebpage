@@ -1,0 +1,51 @@
+{
+    "society": [{
+            "label": "Empresarial Unipersonal",
+            "code": "EMP01",
+            "description": "",
+            "type": ""
+        },
+        {
+            "label": "Sociedad de Responsabilidad Limitada",
+            "code": "EMP02",
+            "description": "",
+            "type": ""
+        },
+        {
+            "label": "Sociedad Colectiva",
+            "code": "EMP03",
+            "description": "",
+            "type": ""
+        },
+        {
+            "label": "Comandita Simple",
+            "code": "EMP04",
+            "description": "",
+            "type": ""
+        },
+        {
+            "label": "Sociedad Anonima",
+            "code": "EMP05",
+            "description": "",
+            "type": ""
+        },
+        {
+            "label": "Comandita por Acciones",
+            "code": "EMP06",
+            "description": "",
+            "type": ""
+        },
+        {
+            "label": "Sociedad Anonima Mixta",
+            "code": "EMP07",
+            "description": "",
+            "type": ""
+        },
+        {
+            "label": "Sociudades Constituidas en el Extranjero",
+            "code": "EMP08",
+            "description": "",
+            "type": ""
+        }
+    ]
+}
